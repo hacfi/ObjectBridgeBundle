@@ -3,7 +3,10 @@ hacfi Doctrine Bridge Bundle
 
 This bundle allows associations between different Doctrine ORMs and ODMs.
 
-This project is at a very experimental state and has limited functionality at the moment.
+This project is at a experimental state and has limited functionality at the moment. It should work for Doctrine ORM to Doctrine PHPCR ODM, and vice versa (not ORM to ORM or PHPCR ODM to PHPCR ODM though).
+
+The related objects are lazy-loaded if they haven’t been loaded by the object manager.
+
 
 TODO:
 ---
