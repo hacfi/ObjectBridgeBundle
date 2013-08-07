@@ -1,0 +1,21 @@
+{
+    "name": "hacfi/doctrine-bridge-bundle",
+    "type": "symfony-bundle",
+    "description": "hacfi Doctrine Bridge Bundle",
+    "keywords": ["doctrine", "orm", "ODM", "Database", "PHPCR"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name":"Philipp Wahala",
+            "email":"philipp.wahala@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "~2.2"
+    },
+    "autoload": {
+        "psr-0": { "hacfi\\Bundle\\DoctrineBridgeBundle": "" }
+    },
+    "target-dir": "hacfi/Bundle/DoctrineBridgeBundle"
+}
