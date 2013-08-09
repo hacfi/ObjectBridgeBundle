@@ -30,7 +30,7 @@ Install
 app/AppKernel.php:
 
 ```php
-            new Doctrine\Bundle\DoctrineObjectBridgeBundle\DoctrineObjectBridgeBundle(),
+            new Hacfi\Bundle\ObjectBridgeBundle\HacfiObjectBridgeBundle(),
 ```
 
 app/autoload.php:

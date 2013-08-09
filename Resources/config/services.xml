@@ -5,13 +5,13 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="doctrine_bridge.cache_dir">%kernel.cache_dir%/doctrine_bridge</parameter>
+        <parameter key="doctrine_bridge.cache_dir">%kernel.cache_dir%/object_bridge</parameter>
         <parameter key="doctrine_bridge.simple_annotation_reader.class">Doctrine\Common\Annotations\SimpleAnnotationReader</parameter>
         <parameter key="doctrine_bridge.annotation_cache.class">Doctrine\Common\Cache\PhpFileCache</parameter>
         <parameter key="doctrine_bridge.cached_annotation_reader.class">Doctrine\Common\Annotations\CachedReader</parameter>
         <parameter key="doctrine_bridge.metadata.provider.class">Hacfi\Bundle\ObjectBridgeBundle\Mapping\Driver\AnnotationDriver</parameter>
-        <parameter key="doctrine_bridge.orm.event_subscriber.class">Hacfi\Bundle\ObjectBridgeBundle\EventListener\DoctrineORMEventSubscriber</parameter>
-        <parameter key="doctrine_bridge.phpcr.event_subscriber.class">Hacfi\Bundle\ObjectBridgeBundle\EventListener\DoctrinePHPCREventSubscriber</parameter>
+        <parameter key="doctrine_bridge.orm.event_subscriber.class">Hacfi\Bundle\ObjectBridgeBundle\EventListener\DoctrineOrmEventSubscriber</parameter>
+        <parameter key="doctrine_bridge.phpcr.event_subscriber.class">Hacfi\Bundle\ObjectBridgeBundle\EventListener\DoctrinePhpcrEventSubscriber</parameter>
     </parameters>
 
     <services>

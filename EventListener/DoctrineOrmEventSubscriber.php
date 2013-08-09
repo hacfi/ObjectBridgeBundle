@@ -8,7 +8,7 @@ use Doctrine\Common\Util\ClassUtils;
 
 use Hacfi\Bundle\ObjectBridgeBundle\Mapping\Driver\AnnotationDriver;
 
-class DoctrineORMEventSubscriber implements EventSubscriber
+class DoctrineOrmEventSubscriber implements EventSubscriber
 {
     /**
      * @var ContainerInterface

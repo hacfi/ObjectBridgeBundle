@@ -9,7 +9,7 @@ use Doctrine\Common\Util\ClassUtils;
 
 use Hacfi\Bundle\ObjectBridgeBundle\Mapping\Driver\AnnotationDriver;
 
-class DoctrinePHPCREventSubscriber implements EventSubscriber
+class DoctrinePhpcrEventSubscriber implements EventSubscriber
 {
     /**
      * @var ContainerInterface
