@@ -9,15 +9,15 @@
         <parameter key="doctrine_bridge.simple_annotation_reader.class">Doctrine\Common\Annotations\SimpleAnnotationReader</parameter>
         <parameter key="doctrine_bridge.annotation_cache.class">Doctrine\Common\Cache\PhpFileCache</parameter>
         <parameter key="doctrine_bridge.cached_annotation_reader.class">Doctrine\Common\Annotations\CachedReader</parameter>
-        <parameter key="doctrine_bridge.metadata.provider.class">hacfi\Bundle\DoctrineBridgeBundle\Mapping\Driver\AnnotationDriver</parameter>
-        <parameter key="doctrine_bridge.orm.event_subscriber.class">hacfi\Bundle\DoctrineBridgeBundle\EventListener\DoctrineORMEventSubscriber</parameter>
-        <parameter key="doctrine_bridge.phpcr.event_subscriber.class">hacfi\Bundle\DoctrineBridgeBundle\EventListener\DoctrinePHPCREventSubscriber</parameter>
+        <parameter key="doctrine_bridge.metadata.provider.class">Hacfi\Bundle\ObjectBridgeBundle\Mapping\Driver\AnnotationDriver</parameter>
+        <parameter key="doctrine_bridge.orm.event_subscriber.class">Hacfi\Bundle\ObjectBridgeBundle\EventListener\DoctrineORMEventSubscriber</parameter>
+        <parameter key="doctrine_bridge.phpcr.event_subscriber.class">Hacfi\Bundle\ObjectBridgeBundle\EventListener\DoctrinePHPCREventSubscriber</parameter>
     </parameters>
 
     <services>
         <service id="doctrine_bridge.annotation_reader" class="%doctrine_bridge.simple_annotation_reader.class%" public="false">
             <call method="addNamespace">
-                <argument>hacfi\Bundle\DoctrineBridgeBundle\Mapping</argument>
+                <argument>Hacfi\Bundle\ObjectBridgeBundle\Mapping</argument>
             </call>
         </service>
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace hacfi\Bundle\DoctrineBridgeBundle\EventListener;
+namespace Hacfi\Bundle\ObjectBridgeBundle\EventListener;
 
 use Doctrine\Common\EventSubscriber;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\Common\Util\ClassUtils;
 
-use hacfi\Bundle\DoctrineBridgeBundle\Mapping\Driver\AnnotationDriver;
+use Hacfi\Bundle\ObjectBridgeBundle\Mapping\Driver\AnnotationDriver;
 
 class DoctrineORMEventSubscriber implements EventSubscriber
 {

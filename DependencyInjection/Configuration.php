@@ -1,6 +1,6 @@
 <?php
 
-namespace hacfi\Bundle\DoctrineBridgeBundle\DependencyInjection;
+namespace Hacfi\Bundle\ObjectBridgeBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -13,7 +13,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode    = $treeBuilder->root('hacfi_doctrine_bridge');
+        $rootNode    = $treeBuilder->root('hacfi_object_bridge');
 
         return $treeBuilder;
     }

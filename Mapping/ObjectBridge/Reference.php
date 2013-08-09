@@ -1,6 +1,6 @@
 <?php
 
-namespace hacfi\Bundle\DoctrineBridgeBundle\Mapping\DoctrineBridge;
+namespace Hacfi\Bundle\ObjectBridgeBundle\Mapping\ObjectBridge;
 
 use Doctrine\Common\Annotations\Annotation;
 

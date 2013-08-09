@@ -1,4 +1,4 @@
-hacfi Doctrine Bridge Bundle
+hacfi Object Bridge Bundle
 ===
 
 This bundle allows associations between different Doctrine ORMs and ODMs.
@@ -20,7 +20,7 @@ TODO:
 - [ ] Create a registry for Doctrine mappers to make it extendable (MongoDB ODM & CouchDB ODM)
 - [ ] Validate the mappings and make sure the mapper specified via ```type``` is available
 
-Please note that the use-statement for the annotations has to be "use hacfi\Bundle\DoctrineBridgeBundle\Mapping\DoctrineBridge;"
+Please note that the use-statement for the annotations has to be "use Hacfi\Bundle\ObjectBridgeBundle\Mapping\ObjectBridge;"
 and doesn’t allow aliasing because the Doctrine’s SimpleAnnotationReader doesn’t support it. This might change in the future.
 
 
@@ -30,28 +30,28 @@ Install
 app/AppKernel.php:
 
 ```php
-            new hacfi\Bundle\DoctrineBridgeBundle\hacfiDoctrineBridgeBundle(),
+            new Doctrine\Bundle\DoctrineObjectBridgeBundle\DoctrineObjectBridgeBundle(),
 ```
 
 app/autoload.php:
 
 ```php
-AnnotationRegistry::registerFile(__DIR__.'/../vendor/hacfi/doctrine-bridge-bundle/hacfi/Bundle/DoctrineBridgeBundle/Mapping/DoctrineBridge/Reference.php');
+AnnotationRegistry::registerFile(__DIR__.'/../vendor/hacfi/object-bridge-bundle/Hacfi/Bundle/ObjectBridgeBundle/Mapping/ObjectBridge/Reference.php');
 ```
 
 Example
 ---
 
-/src/hacfi/AppBundle/Entity/Product.php:
+/src/Hacfi/AppBundle/Entity/Product.php:
 
 ```php
 <?php
-namespace hacfi\AppBundle\Entity;
+namespace Hacfi\AppBundle\Entity;
 
-use hacfi\AppBundle\Document\ProductProperties;
+use Hacfi\AppBundle\Document\ProductProperties;
 
 use Doctrine\ORM\Mapping as ORM;
-use hacfi\Bundle\DoctrineBridgeBundle\Mapping\DoctrineBridge;
+use Hacfi\Bundle\ObjectBridgeBundle\Mapping\ObjectBridge;
 
 /**
  * Product
@@ -76,7 +76,7 @@ class Product implements ProductInterface
     /**
      * @ORM\Column(name="properties", type="string", length=255, nullable=false)
      *
-     * @DoctrineBridge\Reference(type="phpcr", name="hacfiAppBundle:ProductProperties", manager="default")
+     * @ObjectBridge\Reference(type="phpcr", name="HacfiAppBundle:ProductProperties", manager="default")
      */
     private $properties;
 
@@ -84,16 +84,16 @@ class Product implements ProductInterface
 
 ```
 
-/src/hacfi/AppBundle/Document/ProductProperties.php:
+/src/Hacfi/AppBundle/Document/ProductProperties.php:
 
 ```php
 <?php
-namespace hacfi\AppBundle\Document;
+namespace Hacfi\AppBundle\Document;
 
-use hacfi\AppBundle\Entity\Product;
+use Hacfi\AppBundle\Entity\Product;
 
 use Doctrine\ODM\PHPCR\Mapping\Annotations as PHPCRODM;
-use hacfi\Bundle\DoctrineBridgeBundle\Mapping\DoctrineBridge;
+use Hacfi\Bundle\ObjectBridgeBundle\Mapping\ObjectBridge;
 
 /**
  * ProductProperties
@@ -111,7 +111,7 @@ class ProductProperties
     /**
      * @PHPCRODM\String
      *
-     * @DoctrineBridge\Reference(type="orm", name="hacfiAppBundle:Product", manager="default")
+     * @ObjectBridge\Reference(type="orm", name="HacfiAppBundle:Product", manager="default")
      */
     protected $product;
 

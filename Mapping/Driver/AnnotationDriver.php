@@ -1,6 +1,6 @@
 <?php
 
-namespace hacfi\Bundle\DoctrineBridgeBundle\Mapping\Driver;
+namespace Hacfi\Bundle\ObjectBridgeBundle\Mapping\Driver;
 
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Cache\Cache;
@@ -41,7 +41,7 @@ class AnnotationDriver
             $bridges = array();
 
             foreach ($class->getProperties() as $property) {
-                if (null !== $bridge = $this->reader->getPropertyAnnotation($property, 'hacfi\Bundle\DoctrineBridgeBundle\Mapping\DoctrineBridge\Reference')) {
+                if (null !== $bridge = $this->reader->getPropertyAnnotation($property, 'Hacfi\Bundle\ObjectBridgeBundle\Mapping\ObjectBridge\Reference')) {
                     // @TODO: Validate type here?
 
                     $bridges[$property->getName()] = array(
